@@ -1,8 +1,12 @@
 <template>
-  <v-container style="background: url('https://nordicapis.com/wp-content/uploads/How-to-Build-an-API-Driven-Weather-App.png');background-size: contain;">
-    <v-card class="mx-auto my-12 px-10 py-10 light-blue lighten-4" max-width="550" style="border-radius: 10px">
+  <v-container class="container">
+    <v-card
+      class="mx-auto my-12 px-10 py-10 light-blue lighten-4"
+      max-width="550"
+      style="border-radius: 10px"
+    >
       <v-row class="text-center mb-2" justify="center">
-          <h1>WEATHER</h1>
+        <h1>WEATHER</h1>
       </v-row>
       <v-row class="text-center" justify="center">
         <v-col class="">
@@ -12,7 +16,7 @@
               v-model="city"
               placeholder="City"
               @keyup.enter="getWeather"
-              style="border-radius: 10px;"
+              style="border-radius: 10px"
             ></v-text-field>
           </v-row>
         </v-col>
@@ -88,13 +92,17 @@
 
         <v-col class="mb-5" cols="12">
           <v-row justify="center">
-            <v-col cols="5"> {{ weather.main.humidity }} % <br>Humidity </v-col>
-            <v-col cols="5"> {{ weather.clouds.all }} % <br>Cloudiness </v-col>
+            <v-col cols="5">
+              {{ weather.main.humidity }} % <br />Humidity
+            </v-col>
+            <v-col cols="5">
+              {{ weather.clouds.all }} % <br />Cloudiness
+            </v-col>
           </v-row>
         </v-col>
 
         <v-col cols="12">
-            <i>openweathermap.org</i>
+          <i>openweathermap.org</i>
         </v-col>
       </v-row>
 
@@ -136,3 +144,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.container {
+  background: url("../assets/background.png");
+  background-size: contain;
+}
+</style>
