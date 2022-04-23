@@ -120,6 +120,7 @@ export default {
     };
   },
   created() {
+    // get default weather data of Yangon
     this.$store.dispatch("getWeather", "Yangon");
   },
   computed: {
@@ -135,6 +136,7 @@ export default {
   },
 
   methods: {
+    // search by city
     getWeather() {
       this.$store.dispatch(
         "getWeather",

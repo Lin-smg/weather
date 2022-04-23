@@ -26,6 +26,7 @@ export default new Vuex.Store({
   actions: {
     getWeather({ commit }, city) {
       commit("SET_LOADING", true);
+      // get weather from API
       axios
         .get(
           "https://api.openweathermap.org/data/2.5/weather?q=" +

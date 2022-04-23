@@ -6,7 +6,7 @@ import store from './store'
 Vue.config.productionTip = false
 
 new Vue({
-  store,
-  vuetify,
+  store, // state management (vuex)
+  vuetify, // use Vuetify UI framework
   render: h => h(App)
 }).$mount('#app')
